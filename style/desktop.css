@@ -4,4 +4,60 @@
 
 body {
     font-family: "Roboto Mono", 'Courier New', Courier, monospace;
+    margin: 0;
+
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(249, 118, 118);
+}
+
+a:hover {
+    color: rgb(251, 69, 69);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: .1rem solid black;
+}
+
+nav {
+    padding: 1.5rem;
+    margin-right: 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+
+    font-size: large;
+}
+
+.navLink {
+    font-size: larger;
+    color: black;
+}
+
+#logoFig {
+    margin-left: 2rem;
+}
+
+#logo {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+footer {
+    background-color: #353535;
+    color: rgb(219, 219, 219);
+    padding-bottom: 30rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
 }
