@@ -56,12 +56,52 @@ footer {
     background-color: #353535;
     color: rgb(219, 219, 219);
     padding-bottom: 33.5rem;
+    padding-top: 2rem;
 
     display: flex;
     flex-flow: column nowrap;
     text-align: center;
 }
 
-#welcomePage {
+/* Welcome page */
 
+#welcomePage {
+    margin: 0rem;
+    padding: 0rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+#welcomeTextWrapper {    
+    margin: 0rem;
+    padding: 15% 0rem 0rem 0rem;
+
+    display: flex;
+    flex-flow: column wrap;
+    
+
+    font-size: 1rem;
+
+    max-width: 45%;
+}
+
+#welcomeHeader {
+    margin: 0.5rem;
+    padding: 0.5rem;
+
+    font-size: 1.3rem;
+}
+
+#welcomeParagraph {
+    margin: 0rem;
+    padding: 1rem;
+}
+
+#welcomePageImage {
+    margin: 0rem;
+    padding: 0rem;
+
+    height: 40rem;
 }
