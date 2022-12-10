@@ -63,6 +63,10 @@ footer {
     text-align: center;
 }
 
+.selectedPage {
+    text-decoration: underline;
+}
+
 /* Welcome page */
 
 #welcomePage {
@@ -74,13 +78,14 @@ footer {
     justify-content: space-between;
 }
 
-#welcomeTextWrapper {    
+#welcomeTextWrapper {
     margin: 0rem;
-    padding: 15% 0rem 0rem 0rem;
+    padding: 10rem 0rem 0rem 5rem;
 
     display: flex;
     flex-flow: column wrap;
-    
+    align-items: center;
+    text-align: center;
 
     font-size: 1rem;
 
@@ -92,11 +97,14 @@ footer {
     padding: 0.5rem;
 
     font-size: 1.3rem;
+    font-weight: normal;
 }
 
 #welcomeParagraph {
     margin: 0rem;
     padding: 1rem;
+
+    max-width: 90%;
 }
 
 #welcomePageImage {
