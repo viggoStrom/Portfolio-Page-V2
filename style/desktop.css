@@ -55,9 +55,13 @@ nav {
 footer {
     background-color: #353535;
     color: rgb(219, 219, 219);
-    padding-bottom: 30rem;
+    padding-bottom: 33.5rem;
 
     display: flex;
     flex-flow: column nowrap;
     text-align: center;
+}
+
+#welcomePage {
+
 }
