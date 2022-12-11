@@ -21,7 +21,7 @@ a:hover {
 
 header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 
     height: 4rem;
@@ -44,13 +44,15 @@ nav {
     color: black;
 }
 
-#logoFig {
-    display: none;
-}
-
 #logo {
     aspect-ratio: 1/1;
     object-fit: cover;
+
+    padding: 0rem;
+    margin: 0rem 0rem 0rem 1rem;
+    scale: 1.2;
+
+    height: 3rem;
 }
 
 footer {

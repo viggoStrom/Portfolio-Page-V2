@@ -43,13 +43,15 @@ nav {
     color: black;
 }
 
-#logoFig {
-    margin-left: 2rem;
-}
-
 #logo {
     aspect-ratio: 1/1;
     object-fit: cover;
+
+    padding: 0rem;
+    margin: 0rem 0rem 0rem 3rem;
+    scale: 1.2;
+
+    height: 3rem;
 }
 
 footer {
