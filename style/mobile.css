@@ -21,10 +21,9 @@ a:hover {
 
 header {
     display: flex;
+    flex-flow: column nowrap;
     justify-content: space-between;
     align-items: center;
-
-    height: 4rem;
 
     border-bottom: .1rem solid black;
 }
@@ -48,11 +47,13 @@ nav {
     aspect-ratio: 1/1;
     object-fit: cover;
 
-    padding: 0rem;
-    margin: 0rem 0rem 0rem 1rem;
-    scale: 1.2;
+    margin: .5rem;
+    /* scale: 1.2; */
 
-    height: 3rem;
+    display: flex;
+    justify-content: center;
+
+    height: 4rem;
 }
 
 footer {
