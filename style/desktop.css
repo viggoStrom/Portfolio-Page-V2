@@ -197,3 +197,10 @@ li {
     margin: 0;
     max-width: 28rem;
 }
+
+#workaroundLink {
+    color: #353535;
+}
+#workaroundLink:hover {
+    color: rgb(251, 69, 69);
+}
