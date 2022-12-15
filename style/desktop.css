@@ -148,6 +148,8 @@ li {
 
 .portfolioListElement {
     max-width: 90rem;
+    max-height: 19rem;
+
     background-color: rgb(235, 235, 235);
     color: black;
     border: black solid 1px;

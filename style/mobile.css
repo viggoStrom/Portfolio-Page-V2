@@ -177,7 +177,7 @@ li {
 
     border-radius: 2rem 2rem 0rem 0rem;
 
-    max-height: 20rem;
+    max-width: 100%;
 
     transform: scale(1);
     transition: transform .3s ease-in-out;
