@@ -33,9 +33,9 @@ nav {
 
     display: flex;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 1rem;
 
-    font-size: large;
+    font-size: medium;
 }
 
 .navLink {
@@ -65,6 +65,10 @@ footer {
     display: flex;
     flex-flow: column nowrap;
     text-align: center;
+}
+
+footer p {
+    padding: auto 1rem auto 1rem;
 }
 
 .selectedPage {
@@ -146,20 +150,22 @@ li {
     margin: 0rem;
     padding: 0rem;
 
-    max-width: 95%;
-
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    align-items: center;
 
     gap: 2rem;
+}
+
+#portfolioUnorderedList li {
+    max-width: 80%;
 }
 
 .portfolioListElement {
     background-color: rgb(235, 235, 235);
     color: black;
     border: black solid 1px;
-    
+
     padding: 0rem 0rem 2rem 0rem;
     margin: 0rem 0rem 1rem 0rem;
 
@@ -207,6 +213,7 @@ li {
 #workaroundLink {
     color: #353535;
 }
+
 #workaroundLink:hover {
     color: rgb(251, 69, 69);
 }
