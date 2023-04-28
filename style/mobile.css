@@ -1,3 +1,9 @@
+:root {
+    --mainColor: #23283b;
+    --accentColorLight: rgb(229, 229, 0);
+    --accentColorDark: rgb(150, 150, 21);
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -5,6 +11,7 @@
 body {
     font-family: "Roboto Mono", 'Courier New', Courier, monospace;
     margin: 0;
+    padding: 0;
 
     display: flex;
     flex-flow: column nowrap;
@@ -12,11 +19,11 @@ body {
 
 a {
     text-decoration: none;
-    color: rgb(249, 118, 118);
+    color: var(--accentColorLight);
 }
 
 a:hover {
-    color: rgb(251, 69, 69);
+    color: var(--accentColorDark);
 }
 
 header {
@@ -25,15 +32,18 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    border-bottom: .1rem solid black;
+    box-shadow: 0 0 1vh black;
+
+    z-index: 99;
 }
 
 nav {
-    padding: .5rem;
+    padding: 2vh;
+    margin-right: 2vw;
 
     display: flex;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 6vw;
 
     font-size: medium;
 }
@@ -47,19 +57,21 @@ nav {
     aspect-ratio: 1/1;
     object-fit: cover;
 
-    margin: .5rem;
-    /* scale: 1.2; */
+    padding: 0;
+    margin: 0;
+    margin-top: 2vh;
+    scale: 1.2;
 
-    display: flex;
-    justify-content: center;
+    height: 5vh;
 
-    height: 4rem;
+    filter: brightness(1.5);
 }
 
+
 footer {
-    background-color: #353535;
+    background-color: #23283b;
     color: rgb(219, 219, 219);
-    padding-bottom: 41rem;
+    padding-bottom: 70vh;
     padding-top: 2rem;
 
     display: flex;
@@ -67,62 +79,68 @@ footer {
     text-align: center;
 }
 
-footer p {
-    padding: auto 1rem auto 1rem;
+.selectedPage {
+    border-bottom: 2px solid black;
 }
 
-.selectedPage {
-    text-decoration: underline;
+.selectedPage:hover {
+    border-bottom: 2px solid var(--accentColorDark);
 }
 
 li {
     list-style: none;
-    margin: 0rem;
-    padding: 0rem;
-}
-
-.desktopOnly {
-    display: none;
 }
 
 /* Welcome page */
 
 #welcomePage {
-    margin: 0rem;
-    padding: 0rem;
+    margin: 0;
+    padding: 0;
 
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
+    flex-flow: column nowrap;
+
 }
 
 #welcomeTextWrapper {
-    margin: 0rem 0rem 8rem 0rem;
+    margin: 0;
+    padding: 0;
+    margin-top: 0;
 
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    text-align: center;
+    text-align: left;
 
     font-size: 1rem;
+
+    width: 100%;
 }
 
 #welcomePageH1 {
+    margin-top: 4vh;
+    text-align: center;
     max-width: 90%;
 }
 
 #welcomeParagraph {
-    margin: 0rem;
-    padding: 1rem;
+    margin: 0;
+    margin-bottom: 6vh;
+    padding: 0;
 
-    max-width: 95%;
+    max-width: 84%;
 }
 
 #welcomePageImage {
-    margin: 0rem;
-    padding: 0rem;
+    margin: 0;
+    padding: 0;
 
-    width: 100%;
+    width: 100vw;
+    aspect-ratio: 1/1;
+}
+
+.desktopOnly {
+    display: none;
 }
 
 /* Portfolio Page */
@@ -135,79 +153,92 @@ li {
 }
 
 #portfolioPageH1 {
-    margin: 1rem;
-    padding: 1rem 0rem 0rem 0rem;
+    margin: 0;
+    padding: 0;
+    margin-top: 4vh;
+    margin-bottom: 2vh;
 }
 
 #portfolioDescription {
-    margin: 0rem 0rem 5rem 0rem;
-    padding: 0rem;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10vh;
 
-    max-width: 85%;
+    text-align: left;
+    max-width: 83%;
 }
 
 #portfolioUnorderedList {
-    margin: 0rem;
-    padding: 0rem;
+    display: flex;
+    flex-flow: column nowrap;
+
+    padding: 0;
+    margin: 0;
+
+    width: 100%;
+}
+
+@keyframes scale {
+    from {
+        scale: 1;
+    }
+
+    to {
+        scale: 1.01;
+    }
+}
+
+.portfolioListElement:hover {
+    animation-name: scale;
+    animation-duration: 50ms;
+    scale: 1.01;
+}
+
+.portfolioListElement {
+    color: black;
+    border-top: 1px black solid;
+
+    padding: 0;
+    padding-top: 2vh;
+    padding-bottom: 7vh;
+    margin: 0;
 
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-
-    gap: 2rem;
-}
-
-#portfolioUnorderedList li {
-    max-width: 80%;
-}
-
-.portfolioListElement {
-    background-color: rgb(235, 235, 235);
-    color: black;
-    border: black solid 1px;
-
-    padding: 0rem 0rem 2rem 0rem;
-    margin: 0rem 0rem 1rem 0rem;
-
-    border-radius: 2rem;
-
-    display: flex;
-    flex-flow: column nowrap;
 }
 
 .portfolioElementImg {
     aspect-ratio: 1/1;
     object-fit: cover;
-    margin: 0rem;
-    padding: 0rem;
+    margin: 0;
+    padding: 0;
 
-    border-radius: 2rem 2rem 0rem 0rem;
-
-    max-width: 100%;
-
-    transform: scale(1);
-    transition: transform .3s ease-in-out;
+    height: 35vh;
+    border: 1px solid black;
+    border-radius: 3vw;
 }
 
-.portfolioElementImg:hover {
-    border-radius: 2rem 2rem .8rem .8rem;
-    transform: scale(1.05);
-}
 
 .portfolioElementTextWrapper {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .portfolioElementTitle {
-    margin-top: 2rem;
     font-size: larger;
+
+    margin-top: 2vh;
 }
 
 .portfolioElementParagraph {
-    padding: 0rem 2rem 0rem 2rem;
+    padding: 0;
     margin: 0;
-    max-width: 95%;
+    margin-left: 10vw;
+    width: 85%;
+    text-align: left;
 }
 
 #workaroundLink {
@@ -215,5 +246,5 @@ li {
 }
 
 #workaroundLink:hover {
-    color: rgb(251, 69, 69);
+    color: var(--accentColorDark);
 }
