@@ -159,7 +159,7 @@ li {
     max-width: 65%;
 }
 
-#portfolioUnorderedList {
+#portfolioPage>ul {
     display: flex;
     flex-flow: column nowrap;
 
@@ -179,58 +179,61 @@ li {
     }
 }
 
-.portfolioListElement:hover {
-    animation-name: scale;
-    animation-duration: 50ms;
-    scale: 1.01;
-}
-
-.portfolioListElement {
-    color: black;
-    border-top: 1px black solid;
-
-    padding: 0;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
-    margin: 0;
-
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.portfolioElementImg {
-    aspect-ratio: 1/1;
-    object-fit: cover;
+#portfolioPage>ul {
     margin: 0;
     padding: 0;
 
-    max-height: 40vh;
-}
+    & * {
+        margin: 0;
+        padding: 0;
+    }
 
+    &>hr {
+        margin: 1rem 0;
+    }
 
-.portfolioElementTextWrapper {
-    display: flex;
-    flex-flow: column wrap;
-}
+    &>li:hover {
+        animation-name: scale;
+        animation-duration: 50ms;
+        scale: 1.01;
+    }
 
-.portfolioElementTitle {
-    font-size: larger;
+    &>li {
+        height: 20rem;
+        width: 100%;
 
-    margin-top: 0;
-}
+        &>a {
+            height: 100%;
 
-.portfolioElementParagraph {
-    padding: 0;
-    margin: 0;
-    max-width: 38vw;
-}
+            /* to override the <a> tag color */
+            color: black; 
 
-#workaroundLink {
-    color: #353535;
-}
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: center;
+            column-gap: 5ch;
 
-#workaroundLink:hover {
-    color: var(--accentColorDark);
+            &>img {
+                grid-column: 1;
+                grid-row: 1;
+
+                height: 100%;
+                max-height: 100%;
+
+                aspect-ratio: 1/1;
+                object-fit: cover;
+            }
+
+            &>.text-wrapper {
+                grid-column: 2;
+                grid-row: 1;
+
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
 }
